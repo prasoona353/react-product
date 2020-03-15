@@ -40,8 +40,14 @@ class Items extends Component {
                 <Col key={each.id}>
                   <Card style={{ width: "18rem" }}>
                     <Card.Img key={each.id} variant="top" src={each.image} />
-                    <Card.Body>
-                      <Card.Text className="textColor">
+                    <Card.Body className="textColor">
+                    <Card.Title>{each.name}</Card.Title>
+                      <Card.Text >
+                        {each.description}
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Body className="textColor">
+                      <Card.Text >
                         {each.cost} {each.currency}
                       </Card.Text>
                     </Card.Body>
