@@ -6,10 +6,8 @@ import {
   Card,
   Dropdown
 } from "react-bootstrap";
+import './item.css'
 import data from "./data.json";
-const textColor = {
-  color: "black"
-};
 
 class Items extends Component {
   async componentDidMount() {
@@ -43,7 +41,7 @@ class Items extends Component {
                   <Card style={{ width: "18rem" }}>
                     <Card.Img key={each.id} variant="top" src={each.image} />
                     <Card.Body>
-                      <Card.Text style={textColor}>
+                      <Card.Text className="textColor">
                         {each.cost} {each.currency}
                       </Card.Text>
                     </Card.Body>
@@ -53,16 +51,17 @@ class Items extends Component {
             })}
 
             <Col>
+            
               {!this.state || this.state.loading ? (
                 <div>loading......</div>
               ) : (
                 (console.log(this.state.currencyRates),
                 (
-                  <Dropdown style={{ marginTop: "1rem" }}>
+                  <Dropdown >
                     <Dropdown.Toggle id="dropdown-basic">
                       {this.state && this.state.currency ? this.state.currency: 'Currency'}
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
+                    <Dropdown.Menu className="dropdown-menu">
                       {Object.keys(this.state.currencyRates).map(each => {
                         return (
                           <Dropdown.Item
