@@ -1,0 +1,17 @@
+[
+  { "id": 1,
+    "image": "./shoeimage.jpeg",
+    "cost": 250,
+    "currency": "INR"
+  },
+  {"id": 2,
+    "image": "./bag.jpeg",
+    "cost": 300,
+    "currency": "INR"
+  },
+  {"id": 3,
+    "image": "./watch.jpg",
+    "cost": 350,
+    "currency": "INR"
+  }
+]
